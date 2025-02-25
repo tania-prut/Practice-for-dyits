@@ -1,0 +1,29 @@
+
+.collection-details-container {
+    margin-top: 20px;
+}
+
+.collection-details-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.collection-details-card {
+    flex: 1 1 calc(20% - 20px);
+    max-width: calc(20% - 20px);
+}
+
+@media (max-width: 768px) {
+    .collection-details-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .collection-details-card {
+        flex: 1 1 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
+}

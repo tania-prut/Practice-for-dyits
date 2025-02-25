@@ -1,0 +1,121 @@
+:root {
+  /* Кольори */
+  --color1: #dfe2df;
+  --color2: #1e3670;
+  --color3: #71869f;
+  --color4: #263847;
+
+  --gradient-accent: linear-gradient(135deg, var(--color1) 0%, var(--color2) 100%);
+
+  --background-color: var(--color1);
+  --navbar-background: var(--color2);
+  --text-color: var(--color4);
+  --button-color: var(--color3);
+
+  /* Параметри хедера */
+  --header-height: 80px;
+  --header-padding: 10px;
+  --header-margin-bottom: 0px;
+
+  /* Параметри для карток (книг) */
+  --book-card-width: 200px;
+  --book-card-height: 340px;
+  --book-card-radius: 12px;
+  --book-img-height: 225px;
+  --book-title-size: 16px;
+  --book-author-size: 14px;
+  --book-collection-size: 12px;
+  --card-padding: 10px;
+  --slider-gap: 0px;
+
+  /* Шрифти та кольори для хедера */
+  --header-font-size: 20px;
+  --header-font-color: #ffffff;
+
+  --body-font-size: 16px;
+  --body-font-color: #263847;
+
+  --chat-bg-color: #f8f9fa;
+  --chat-border-color: #ccc;
+  --chat-radius: 12px;
+
+  /* Повідомлення */
+  --msg-bg-color: #ffffff;
+  --msg-own-bg-color: #d1ecf1;
+  --msg-radius: 8px;
+  --msg-menu-bg: #ffffff;
+  --msg-menu-border: #ccc;
+  --msg-menu-radius: 6px;
+
+  --msg-menu-btn-bg: #f1f1f1;
+  --msg-menu-btn-hover: #e2e2e2;
+  --msg-menu-btn-radius: 8px;
+
+  --chat-input-bg: #ffffff;
+  --chat-input-radius: 8px;
+}
+
+[data-theme="dark"] {
+  --background-color: #2a2a2a;
+  --navbar-background: #555555;
+  --text-color: #ffffff;
+  --button-color: var(--color3);
+  --card-background: #444444;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background: var(--navbar-background);
+  width: 100%;
+  min-height: var(--header-height);
+  padding: var(--header-padding);
+  display: flex;
+  align-items: center;
+  font-size: var(--header-font-size);
+  color: var(--header-font-color);
+}
+
+.navbar + .main-container {
+  margin-top: var(--header-margin-bottom);
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .btn {
+  color: var(--header-font-color) !important;
+  font-size: var(--header-font-size);
+}
+
+.main-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: var(--body-font-size);
+  color: var(--body-font-color);
+}
+
+.main-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  z-index: -1;
+}
+
+.btn-primary {
+  background-color: var(--button-color);
+  border-color: var(--button-color);
+}
